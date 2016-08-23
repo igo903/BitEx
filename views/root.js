@@ -17,7 +17,9 @@ import {
 
 var css = require('./styles/CSS')
 var HomeIndex = require('./home/homeIndex');
-
+var QuotationMain = require('./quotation/quotationMain');
+var TradingHallMain = require('./hall/tradingHallMain');
+var MyCenter = require('./my/myCenter');
 
 class Root extends React.Component{
 
@@ -37,12 +39,49 @@ class Root extends React.Component{
       <Navigator
       	configureScene={ this.configureScene }
       	style={{ flex:1 }}
-        initialRoute={{ component: Main }}
+        initialRoute={{ component: TabBarFooter }}
         renderScene={ this.renderScene } />
     );
   }
 
 }
+
+var TabBarFooter = React.createClass({
+
+  render(){
+    <TabBarIOS tintColor = "#058BFD" barTintColor = "#13161A" >
+        <TabBarIOS.Item
+                    title = "首页"
+
+        >
+        <HomeIndex navigator = {this.props.navigator}></HomeIndex>
+        </TabBarIOS.Item>
+
+        <TabBarIOS.Item
+                    title = "行情"
+
+        >
+        <QuotationMain navigator = {this.props.navigator}></QuotationMain>
+        </TabBarIOS.Item>
+
+        <TabBarIOS.Item
+                    title = "交易大厅"
+
+        >
+        <TradingHallMain navigator = {this.props.navigator}></TradingHallMain>
+        </TabBarIOS.Item>
+
+        <TabBarIOS.Item
+                    title = "我的"
+
+        >
+        <MyCenter navigator = {this.props.navigator}></MyCenter>
+        </TabBarIOS.Item>
+
+      </TabBarIOS>
+  }
+});
+
 
 
 var Main = React.createClass({
