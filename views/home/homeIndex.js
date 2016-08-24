@@ -16,16 +16,29 @@ import {
 
 
 var css = require('./../styles/CSS');
+var HomeBuy = require('./homeBuy');
 
 class HomeIndex extends React.Component{
 
+  _navigate(name, type='Normal') {
+  	this.props.navigator.push({
+    	component: HomeBuy,
+      passProps: {
+      	name: name
+      },
+      type: type
+    })
+  }
+
   render() {
     return (
-      
-    	<View style={ css.container }>
-      	<Text style={ css.heading }>Hello from { this.props.name }</Text>
- 				<TouchableHighlight style={ css.button } onPress={ () => this.props.navigator.pop() }>
-      		<Text style={ css.buttonText }>GO Back</Text>
+      <View style={ css.container }>
+      	<Text style={ css.heading }>Hello from Main</Text>
+ 				<TouchableHighlight style={ css.button } onPress={ () => this._navigate('YOYOYOYOYO') }>
+      		<Text style={ css.buttonText }>GO To Home</Text>
+      	</TouchableHighlight>
+				<TouchableHighlight style={ css.button2 } onPress={ () => this._navigate('WOWOWOWO', 'Modal') }>
+      		<Text style={ css.buttonText }>Show Modal</Text>
       	</TouchableHighlight>
       </View>
     )
