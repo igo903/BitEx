@@ -21,6 +21,7 @@ class HomeIndex extends React.Component{
 
   render() {
     return (
+      
     	<View style={ css.container }>
       	<Text style={ css.heading }>Hello from { this.props.name }</Text>
  				<TouchableHighlight style={ css.button } onPress={ () => this.props.navigator.pop() }>
