@@ -23,6 +23,14 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		B565E0F41D6EE6C100FB43DD /* home_buying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0EC1D6EE6C100FB43DD /* home_buying@2x.png */; };
+		B565E0F51D6EE6C100FB43DD /* home_buying@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0ED1D6EE6C100FB43DD /* home_buying@3x.png */; };
+		B565E0F61D6EE6C100FB43DD /* home_message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0EE1D6EE6C100FB43DD /* home_message@2x.png */; };
+		B565E0F71D6EE6C100FB43DD /* home_message@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0EF1D6EE6C100FB43DD /* home_message@3x.png */; };
+		B565E0F81D6EE6C100FB43DD /* home_sale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0F01D6EE6C100FB43DD /* home_sale@2x.png */; };
+		B565E0F91D6EE6C100FB43DD /* home_sale@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0F11D6EE6C100FB43DD /* home_sale@3x.png */; };
+		B565E0FA1D6EE6C100FB43DD /* home_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0F21D6EE6C100FB43DD /* home_search@2x.png */; };
+		B565E0FB1D6EE6C100FB43DD /* home_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565E0F31D6EE6C100FB43DD /* home_search@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +135,14 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		B565E0EC1D6EE6C100FB43DD /* home_buying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_buying@2x.png"; sourceTree = "<group>"; };
+		B565E0ED1D6EE6C100FB43DD /* home_buying@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_buying@3x.png"; sourceTree = "<group>"; };
+		B565E0EE1D6EE6C100FB43DD /* home_message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_message@2x.png"; sourceTree = "<group>"; };
+		B565E0EF1D6EE6C100FB43DD /* home_message@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_message@3x.png"; sourceTree = "<group>"; };
+		B565E0F01D6EE6C100FB43DD /* home_sale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_sale@2x.png"; sourceTree = "<group>"; };
+		B565E0F11D6EE6C100FB43DD /* home_sale@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_sale@3x.png"; sourceTree = "<group>"; };
+		B565E0F21D6EE6C100FB43DD /* home_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_search@2x.png"; sourceTree = "<group>"; };
+		B565E0F31D6EE6C100FB43DD /* home_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_search@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +254,14 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				B565E0EC1D6EE6C100FB43DD /* home_buying@2x.png */,
+				B565E0ED1D6EE6C100FB43DD /* home_buying@3x.png */,
+				B565E0EE1D6EE6C100FB43DD /* home_message@2x.png */,
+				B565E0EF1D6EE6C100FB43DD /* home_message@3x.png */,
+				B565E0F01D6EE6C100FB43DD /* home_sale@2x.png */,
+				B565E0F11D6EE6C100FB43DD /* home_sale@3x.png */,
+				B565E0F21D6EE6C100FB43DD /* home_search@2x.png */,
+				B565E0F31D6EE6C100FB43DD /* home_search@3x.png */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -510,8 +534,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B565E0F61D6EE6C100FB43DD /* home_message@2x.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B565E0FB1D6EE6C100FB43DD /* home_search@3x.png in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				B565E0F91D6EE6C100FB43DD /* home_sale@3x.png in Resources */,
+				B565E0F51D6EE6C100FB43DD /* home_buying@3x.png in Resources */,
+				B565E0F71D6EE6C100FB43DD /* home_message@3x.png in Resources */,
+				B565E0F81D6EE6C100FB43DD /* home_sale@2x.png in Resources */,
+				B565E0FA1D6EE6C100FB43DD /* home_search@2x.png in Resources */,
+				B565E0F41D6EE6C100FB43DD /* home_buying@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

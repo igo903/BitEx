@@ -7,12 +7,13 @@ import {
   View,
   ScrollView,
   Image,
-  TouchableHighlight,
   TabBarIOS,
+  TouchableOpacity,
   NavigatorIOS,
   Navigator
 
 } from 'react-native';
+import TabBarNavigator from 'react-native-tab-navigator'
 
 
 var css = require('./styles/CSS')
@@ -24,6 +25,12 @@ var MyCenter = require('./my/myCenter');
 
 
 class Root extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  componentWillMount(){
+  }
 
   renderScene(route, navigator) {
     return <route.component navigator={navigator} {...route.passProps} />
@@ -38,11 +45,15 @@ class Root extends React.Component{
 
   render(){
     return (
-      <Navigator
-      	configureScene={ this.configureScene }
-      	style={{ flex:1 }}
-        initialRoute={{ component: TabBarFooter }}
-        renderScene={ this.renderScene } />
+      <View style={[css.flex, css.appBackground]}>
+        <StatusBar barStyle="light-content"/>
+        <Navigator
+        	configureScene={ this.configureScene }
+        	style={{ flex:1 }}
+          initialRoute={{ component: TabBarFooter }}
+          renderScene={ this.renderScene } />
+      </View>
+      
     );
   }
 
