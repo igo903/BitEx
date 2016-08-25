@@ -9,17 +9,18 @@ import {
   Image,
   TouchableHighlight,
   TabBarIOS,
-  NavigatorIOS,
   Navigator
 
 } from 'react-native';
+
+var css = require('./styles/CSS');
 
 class NavTop extends React.Component{
 
   render(){
     return(
       <View>
-        
+
       </View>
     )
   }

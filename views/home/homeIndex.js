@@ -9,22 +9,36 @@ import {
   Image,
   TouchableHighlight,
   TabBarIOS,
-  NavigatorIOS,
   Navigator
 
 } from 'react-native';
 
 
 var css = require('./../styles/CSS');
-var HomeBuy = require('./homeBuy');
+var MyHomeBuy = require('./homeBuy');
+
+var pages = {};
+pages["HomeBuy"] = require('./homeBuy');
+
 
 class HomeIndex extends React.Component{
 
   _navigate(name, type='Normal') {
+    console.log(name);
   	this.props.navigator.push({
-    	component: HomeBuy,
+    	component: MyHomeBuy,
       passProps: {
       	name: name
+      },
+      type: type
+    })
+  }
+
+  linkTo(funCode,funName, type="Normal"){
+    this.props.navigator.push({
+      component: pages[funCode],
+      passProps: {
+        name: funName
       },
       type: type
     })
@@ -34,10 +48,10 @@ class HomeIndex extends React.Component{
     return (
       <View style={ css.container }>
       	<Text style={ css.heading }>Hello from Main</Text>
- 				<TouchableHighlight style={ css.button } onPress={ () => this._navigate('YOYOYOYOYO') }>
+ 				<TouchableHighlight style={ css.button } onPress={ () => this.linkTo("HomeBuy","积分买入") }>
       		<Text style={ css.buttonText }>GO To Home</Text>
       	</TouchableHighlight>
-				<TouchableHighlight style={ css.button2 } onPress={ () => this._navigate('WOWOWOWO', 'Modal') }>
+				<TouchableHighlight style={ css.button2 } onPress={ () => this._navigate('homeBuy', 'Modal') }>
       		<Text style={ css.buttonText }>Show Modal</Text>
       	</TouchableHighlight>
       </View>

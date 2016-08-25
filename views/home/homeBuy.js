@@ -9,7 +9,6 @@ import {
   Image,
   TouchableHighlight,
   TabBarIOS,
-  NavigatorIOS,
   Navigator
 
 } from 'react-native';
