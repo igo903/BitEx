@@ -53,7 +53,7 @@ class Root extends React.Component{
           initialRoute={{ component: TabBarFooter }}
           renderScene={ this.renderScene } />
       </View>
-      
+
     );
   }
 
@@ -74,7 +74,8 @@ class TabBarFooter extends React.Component{
         <TabBarIOS.Item
             title = "首页"
             selected={this.state.selectedTab === 'home'}
-            icon={{uri:'featured'}}
+            icon = {require('image!home')}
+            selectedIcon={require('image!home_selected')}
             onPress={() => {
               this.setState({
                   selectedTab: 'home',
@@ -87,7 +88,8 @@ class TabBarFooter extends React.Component{
         <TabBarIOS.Item
             title = "行情"
             selected={this.state.selectedTab === 'quotation'}
-            icon={{uri:'featured'}}
+            icon = {require('image!trend')}
+            selectedIcon={require('image!trend_selected')}
             onPress={() => {
               this.setState({
                   selectedTab: 'quotation',
@@ -100,7 +102,8 @@ class TabBarFooter extends React.Component{
         <TabBarIOS.Item
             title = "交易大厅"
             selected={this.state.selectedTab === 'hall'}
-            icon={{uri:'featured'}}
+            icon = {require('image!trade')}
+            selectedIcon={require('image!trade_selected')}
             onPress={() => {
               this.setState({
                   selectedTab: 'hall',
@@ -113,7 +116,8 @@ class TabBarFooter extends React.Component{
         <TabBarIOS.Item
             title = "我的"
             selected={this.state.selectedTab === 'mine'}
-            icon={{uri:'featured'}}
+            icon = {require('image!mine')}
+            selectedIcon={require('image!mine_selected')}
             onPress={() => {
               this.setState({
                   selectedTab: 'mine',

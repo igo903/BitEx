@@ -21,6 +21,8 @@ var MyHomeBuy = require('./homeBuy');
 
 var pages = {};
 pages["HomeBuy"] = require('./homeBuy');
+var Dimensions = require('Dimensions');
+var { width, height } = Dimensions.get('window');
 
 
 class HomeIndex extends React.Component{
@@ -48,9 +50,9 @@ class HomeIndex extends React.Component{
 
   render() {
     return (
-      <View>
+      <View style={css.flex}>
         <NavTop title = {"首页"}></NavTop>
-        <ScrollView automaticallyAdjustContentInsets = {false}>
+        <ScrollView style={{height:height-114}} automaticallyAdjustContentInsets = {false}>
           <Swiper height={180}
             activeDot = {<View style={css.swpActDot} />}
             dot = {<View style={css.swpDot} />}
@@ -76,7 +78,7 @@ class HomeIndex extends React.Component{
 
         <View style={[css.row,css.iconPortArea,css.view]}>
 					<View style={css.center}>
-						<TouchableOpacity onPress={ () => this.linkTo("HomeBuy","积分买入") }>
+						<TouchableOpacity onPress={this.linkTo.bind(this,"HomeBuy","积分买入") }>
 							<Image source = {require("image!home_message")} style={css.iconPort}></Image>
 						</TouchableOpacity>
 						<Text style={css.portTxt}>消息中心</Text>
@@ -135,12 +137,6 @@ class HomeIndex extends React.Component{
 					</View>
 
 				</View>
-
-
-
-
-
-
 
         </ScrollView>
       </View>
