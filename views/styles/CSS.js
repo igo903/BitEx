@@ -120,6 +120,23 @@ var appCSS = StyleSheet.create({
 
 
 
+    homeList: {
+        marginTop:5,
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+    adImageView:{
+        width:fullWidth/2-13+5,
+        height:128+5,
+        padding:2.5
+    },
+    adImage:{
+        width:fullWidth/2-13,
+        height:128
+    },
+
+
 
 
 

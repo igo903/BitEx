@@ -7,6 +7,8 @@ import {
   View,
   ScrollView,
   Image,
+  ListView,
+  PixelRatio,
   TouchableOpacity,
   TabBarIOS,
   Navigator
@@ -26,6 +28,22 @@ var { width, height } = Dimensions.get('window');
 
 
 class HomeIndex extends React.Component{
+  constructor(props){
+    super(props);
+    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {dataSource:ds.cloneWithRows([
+      {img:require("./../../img/a1.png")},
+      {img:require("./../../img/a2.png")},
+      {img:require("./../../img/a3.png")},
+      {img:require("./../../img/a2.png")},
+      {img:require("./../../img/a4.png")},
+      {img:require("./../../img/a3.png")},
+      {img:require("./../../img/a2.png")},
+      {img:require("./../../img/a1.png")},
+      ])
+    }
+  }
+
 
   _navigate(name, type='Normal') {
     console.log(name);
@@ -48,11 +66,19 @@ class HomeIndex extends React.Component{
     })
   }
 
+  listItem(rowData){
+    return (
+      <View style={[css.adImageView]}>
+          <Image resizeMode="cover" style={css.adImage} source = {rowData.img}></Image>
+      </View>
+    )
+  }
+
   render() {
     return (
       <View style={css.flex}>
         <NavTop title = {"首页"}></NavTop>
-        <ScrollView style={{height:height-114}} automaticallyAdjustContentInsets = {false}>
+        <ScrollView style={{marginTop:-20}} automaticallyAdjustContentInsets = {true}>
           <Swiper height={180}
             activeDot = {<View style={css.swpActDot} />}
             dot = {<View style={css.swpDot} />}
@@ -108,33 +134,17 @@ class HomeIndex extends React.Component{
 
 
         <View style={css.view}>
-					<Text style={{marginTop:12,marginLeft:10,marginBottom:12,color:'#76787A'}}>积分优惠活动</Text>
-					<View style={[css.row,css.promosContainer]}>
-						<View style={[css.promoCell,css.center]}>
-							<Image source={require('./../../img/a2.png')} style={css.promoCellImg}></Image>
-						</View>
-						<View style={[css.promoCell,css.center]}>
-							<Image source={require('./../../img/a2.png')}  style={css.promoCellImg} ></Image>
-						</View>
-					</View>
-
-          <View style={[css.row,css.promosContainer]}>
-						<View style={[css.promoCell,css.center]}>
-							<Image source={require('./../../img/a2.png')} style={css.promoCellImg}></Image>
-						</View>
-						<View style={[css.promoCell,css.center]}>
-							<Image source={require('./../../img/a2.png')}  style={css.promoCellImg} ></Image>
-						</View>
-					</View>
-
-          <View style={[css.row,css.promosContainer]}>
-						<View style={[css.promoCell,css.center]}>
-							<Image source={require('./../../img/a2.png')} style={css.promoCellImg}></Image>
-						</View>
-						<View style={[css.promoCell,css.center]}>
-							<Image source={require('./../../img/a2.png')}  style={css.promoCellImg} ></Image>
-						</View>
-					</View>
+          <View>
+            <Text style={{marginTop:12,marginLeft:10,marginBottom:12,color:'#76787A'}}>积分优惠活动</Text>
+          </View>
+          <View style={{paddingLeft:8,paddingRight:8}}>
+            <ListView
+              dataSource = {this.state.dataSource}
+              automaticallyAdjustContentInsets = {false}
+              renderRow = {this.listItem}
+              contentContainerStyle={css.homeList}
+            />
+          </View>
 
 				</View>
 
